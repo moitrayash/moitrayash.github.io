@@ -38,6 +38,28 @@
       margin-bottom: 0;
       font-style: italic;
     }
+    .links {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      gap: 28px;
+    }
+    .links a {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 16px;
+      color: #000;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .links a::after {
+      content: ' ↗';
+      font-size: 0.75em;
+      opacity: 0.5;
+    }
+    .links a:hover {
+      opacity: 0.45;
+    }
   </style>
 </head>
 <body>
@@ -46,6 +68,10 @@
     <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
     <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
     <p>Under Construction</p>
+    <nav class="links">
+      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer">Oeuvre</a>
+      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer">Sovereign Ratings Project</a>
+    </nav>
   </div>
 </body>
 </html>
