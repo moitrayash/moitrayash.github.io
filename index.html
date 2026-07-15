@@ -13,7 +13,14 @@
       color: #000;
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.8;
+    }
+    .page {
       min-height: 100vh;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .half {
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -36,15 +43,12 @@
     }
     p:last-child {
       margin-bottom: 0;
-      font-style: italic;
     }
     .links {
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid #e0e0e0;
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px 28px;
+      flex-direction: column;
+      gap: 18px;
+      padding: 60px 24px;
     }
     .links a {
       font-family: Georgia, 'Times New Roman', serif;
@@ -61,25 +65,50 @@
     .links a:hover {
       opacity: 0.45;
     }
+    @media (max-width: 800px) {
+      .page {
+        flex-direction: column;
+      }
+      .half {
+        width: 100%;
+      }
+      .container {
+        padding: 60px 24px 24px;
+      }
+      .links {
+        width: 100%;
+        max-width: 640px;
+        border-top: 1px solid #e0e0e0;
+        padding: 24px 24px 60px;
+        gap: 16px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Yash Moitra</h1>
-    <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
-    <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
-    <p>Under Construction</p>
-    <nav class="links">
-      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer">Oeuvre</a>
-      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer">Sovereign Ratings Project</a>
-      <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VIDP</a>
-      <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOBL</a>
-      <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VANP</a>
-      <a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOHS</a>
-      <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOGA</a>
-      <a href="https://expo.dev/accounts/yashmoitra/projects/dawai-in/builds?distribution=internal" target="_blank" rel="noopener noreferrer">Dawai.in</a>
-      <a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer">Fix This</a>
-    </nav>
+  <div class="page">
+    <main class="half">
+      <div class="container">
+        <h1>Yash Moitra</h1>
+        <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
+        <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
+        <p>Under Construction</p>
+      </div>
+    </main>
+    <aside class="half">
+      <nav class="links">
+        <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer">Oeuvre</a>
+        <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer">Sovereign Ratings Project</a>
+        <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VIDP</a>
+        <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOBL</a>
+        <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VANP</a>
+        <a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOHS</a>
+        <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOGA</a>
+        <a href="https://expo.dev/accounts/yashmoitra/projects/dawai-in/builds?distribution=internal" target="_blank" rel="noopener noreferrer">Dawai.in</a>
+        <a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer">Fix This</a>
+        <a href="https://github.com/moitrayash" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </aside>
   </div>
 </body>
 </html>
