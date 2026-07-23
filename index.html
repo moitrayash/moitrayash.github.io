@@ -13,14 +13,7 @@
       color: #000;
       font-family: Georgia, 'Times New Roman', serif;
       line-height: 1.8;
-    }
-    .page {
       min-height: 100vh;
-      display: flex;
-      flex-direction: row-reverse;
-    }
-    .half {
-      width: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -43,12 +36,15 @@
     }
     p:last-child {
       margin-bottom: 0;
+      font-style: italic;
     }
     .links {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid #e0e0e0;
       display: flex;
-      flex-direction: column;
-      gap: 18px;
-      padding: 60px 24px;
+      flex-wrap: wrap;
+      gap: 16px 28px;
     }
     .links a {
       font-family: Georgia, 'Times New Roman', serif;
@@ -56,6 +52,7 @@
       color: #000;
       text-decoration: none;
       letter-spacing: 0.02em;
+      position: relative;
     }
     .links a::after {
       content: ' ↗';
@@ -63,51 +60,44 @@
       opacity: 0.5;
     }
     .links a:hover {
-      opacity: 0.45;
+      color: #888;
     }
-    @media (max-width: 800px) {
-      .page {
-        flex-direction: column;
-      }
-      .half {
-        width: 100%;
-      }
-      .container {
-        padding: 60px 24px 24px;
-      }
-      .links {
-        width: 100%;
-        max-width: 640px;
-        border-top: 1px solid #e0e0e0;
-        padding: 24px 24px 60px;
-        gap: 16px;
-      }
+    .links a:hover::before {
+      content: attr(data-tip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 0;
+      width: max-content;
+      max-width: 280px;
+      background: #000;
+      color: #fff;
+      font-size: 13px;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      padding: 6px 10px;
+      white-space: normal;
+      z-index: 2;
+      pointer-events: none;
     }
   </style>
 </head>
 <body>
-  <div class="page">
-    <main class="half">
-      <div class="container">
-        <h1>Yash Moitra</h1>
-        <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
-        <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
-        <p>Under Construction</p>
-      </div>
-    </main>
-    <aside class="half">
-      <nav class="links">
-        <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer">Oeuvre</a>
-        <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer">Sovereign Ratings Project</a>
-        <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VIDP</a>
-        <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOBL</a>
-        <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VANP</a>
-        <a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOHS</a>
-        <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer">Feathervane: VOGA</a>
-        <a href="https://expo.dev/accounts/yashmoitra/projects/dawai-in/builds?distribution=internal" target="_blank" rel="noopener noreferrer">Dawai.in</a>
-        <a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer">Fix This</a>
-        </nav>
-    </aside>
+  <div class="container">
+    <h1>Yash Moitra</h1>
+    <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
+    <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
+    <p>Under Construction</p>
+    <nav class="links">
+      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="writings on my wall">Oeuvre</a>
+      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
+      <a href="https://sonset.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Sonset Almanac &mdash; variance between time of sunset over the year, 2026">Sonset Almanac</a>
+      <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Delhi">Feathervane: VIDP</a>
+      <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Bengaluru">Feathervane: VOBL</a>
+      <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Nagpur">Feathervane: VANP</a>
+      <a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Hyderabad">Feathervane: VOHS</a>
+      <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Goa">Feathervane: VOGA</a>
+      <a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="[Demo] Portal for city/municipal governments to receive infrastructure complaints and grievances">Fix This</a>
+    </nav>
   </div>
 </body>
 </html>
