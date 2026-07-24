@@ -17,34 +17,48 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .container {
-      max-width: 640px;
-      width: 100%;
       padding: 60px 24px;
+    }
+    .layout {
+      width: 100%;
+      max-width: 880px;
+      display: flex;
+      align-items: center;
+      gap: 56px;
+    }
+    .intro {
+      flex: 1;
+      min-width: 0;
+      text-align: right;
     }
     h1 {
       font-size: 42px;
       font-weight: normal;
-      margin-bottom: 32px;
       letter-spacing: 0.01em;
+      margin-bottom: 32px;
     }
-    p {
+    .intro p {
       font-size: 17px;
       line-height: 1.85;
       margin-bottom: 20px;
+      text-wrap: pretty;
     }
-    p:last-child {
+    .intro p:last-child {
       margin-bottom: 0;
-      font-style: italic;
+    }
+    .divider {
+      align-self: stretch;
+      width: 1px;
+      background: #e0e0e0;
     }
     .links {
-      margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid #e0e0e0;
+      position: relative;
+      flex: 1;
+      min-width: 0;
       display: flex;
-      flex-wrap: wrap;
-      gap: 16px 28px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
     }
     .links a {
       font-family: Georgia, 'Times New Roman', serif;
@@ -52,6 +66,7 @@
       color: #000;
       text-decoration: none;
       letter-spacing: 0.02em;
+      line-height: 1.5;
       position: relative;
     }
     .links a::after {
@@ -82,15 +97,16 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Yash Moitra</h1>
-    <p>I&rsquo;m Yash, and this is my personal website. I aim to use this as a digital repository of sorts; my poetry, musings, and other work live here until they should find more permanent homes.</p>
-    <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
-    <p>Under Construction</p>
+  <div class="layout">
+    <div class="intro">
+      <h1>Yash Moitra</h1>
+      <p>I&rsquo;m Yash, and this is my personal website; my poetry, musings, and other work live here until they should find more permanent homes.</p>
+      <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
+    </div>
+    <div class="divider"></div>
     <nav class="links">
-      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="writings on my wall">Oeuvre</a>
-      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
-      <a href="https://sonset.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Sonset Almanac &mdash; variance between time of sunset over the year, 2026">Sonset Almanac</a>
+      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Writings on my wall">Oeuvre</a>
+      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
       <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Delhi">Feathervane: VIDP</a>
       <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Bengaluru">Feathervane: VOBL</a>
       <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Nagpur">Feathervane: VANP</a>
