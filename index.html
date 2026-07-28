@@ -1,119 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yash Moitra</title>
-  <meta name="description" content="Yash Moitra — personal website." />
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { font-size: 16px; }
-    body {
-      background: #fff;
-      color: #000;
-      font-family: Georgia, 'Times New Roman', serif;
-      line-height: 1.8;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 24px;
-    }
-    .layout {
-      width: 100%;
-      max-width: 880px;
-      display: flex;
-      align-items: center;
-      gap: 56px;
-    }
-    .intro {
-      flex: 1;
-      min-width: 0;
-      text-align: right;
-    }
-    h1 {
-      font-size: 42px;
-      font-weight: normal;
-      letter-spacing: 0.01em;
-      margin-bottom: 32px;
-    }
-    .intro p {
-      font-size: 17px;
-      line-height: 1.85;
-      margin-bottom: 20px;
-      text-wrap: pretty;
-    }
-    .intro p:last-child {
-      margin-bottom: 0;
-    }
-    .divider {
-      align-self: stretch;
-      width: 1px;
-      background: #e0e0e0;
-    }
-    .links {
-      position: relative;
-      flex: 1;
-      min-width: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-    .links a {
-      font-family: Georgia, 'Times New Roman', serif;
-      font-size: 16px;
-      color: #000;
-      text-decoration: none;
-      letter-spacing: 0.02em;
-      line-height: 1.5;
-      position: relative;
-    }
-    .links a::after {
-      content: ' ↗';
-      font-size: 0.75em;
-      opacity: 0.5;
-    }
-    .links a:hover {
-      color: #888;
-    }
-    .links a:hover::before {
-      content: attr(data-tip);
-      position: absolute;
-      bottom: calc(100% + 8px);
-      left: 0;
-      width: max-content;
-      max-width: 280px;
-      background: #000;
-      color: #fff;
-      font-size: 13px;
-      line-height: 1.5;
-      letter-spacing: 0.01em;
-      padding: 6px 10px;
-      white-space: normal;
-      z-index: 2;
-      pointer-events: none;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yash Moitra</title>
+<meta name="description" content="Yash Moitra — personal website." />
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+background: #fff;
+color: #000;
+font-family: Georgia, 'Times New Roman', serif;
+line-height: 1.8;
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 60px 24px;
+}
+.layout {
+width: 100%;
+max-width: 880px;
+display: flex;
+align-items: center;
+gap: 56px;
+}
+.intro {
+flex: 1;
+min-width: 0;
+text-align: right;
+}
+h1 {
+font-size: 42px;
+font-weight: normal;
+letter-spacing: 0.01em;
+margin-bottom: 32px;
+}
+.intro p {
+font-size: 17px;
+line-height: 1.85;
+margin-bottom: 20px;
+text-wrap: pretty;
+}
+.intro p:last-child {
+margin-bottom: 0;
+}
+.divider {
+align-self: stretch;
+width: 1px;
+background: #e0e0e0;
+}
+.links {
+position: relative;
+flex: 1;
+min-width: 0;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 16px;
+}
+.links a {
+font-family: Georgia, 'Times New Roman', serif;
+font-size: 16px;
+color: #000;
+text-decoration: none;
+letter-spacing: 0.02em;
+line-height: 1.5;
+position: relative;
+}
+.links a::after {
+content: ' ↗';
+font-size: 0.75em;
+opacity: 0.5;
+}
+.links a:hover {
+color: #888;
+}
+.links a:hover::before {
+content: attr(data-tip);
+position: absolute;
+bottom: calc(100% + 8px);
+left: 0;
+width: max-content;
+max-width: 280px;
+background: #000;
+color: #fff;
+font-size: 13px;
+line-height: 1.5;
+letter-spacing: 0.01em;
+padding: 6px 10px;
+white-space: normal;
+z-index: 2;
+pointer-events: none;
+}
+.group {
+width: 100%;
+}
+.group summary {
+font-size: 16px;
+color: #000;
+letter-spacing: 0.02em;
+line-height: 1.5;
+cursor: pointer;
+list-style: none;
+display: inline-block;
+}
+.group summary::-webkit-details-marker { display: none; }
+.group summary::after {
+content: ' ▸';
+font-size: 0.75em;
+opacity: 0.5;
+}
+.group[open] summary::after {
+content: ' ▾';
+}
+.group summary:hover {
+color: #888;
+}
+.sublinks {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 12px;
+margin-top: 14px;
+padding-left: 20px;
+border-left: 1px solid #e0e0e0;
+}
+.sublinks a {
+font-size: 15px;
+line-height: 1.5;
+text-wrap: pretty;
+}
+</style>
 </head>
 <body>
-  <div class="layout">
-    <div class="intro">
-      <h1>Yash Moitra</h1>
-      <p>I&rsquo;m Yash, and this is my personal website; my poetry, musings, and other work live here until they should find more permanent homes.</p>
-      <p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
-    </div>
-    <div class="divider"></div>
-    <nav class="links">
-      <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Writings on my wall">Oeuvre</a>
-      <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
-      <a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Delhi">Feathervane: VIDP</a>
-      <a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Bengaluru">Feathervane: VOBL</a>
-      <a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Nagpur">Feathervane: VANP</a>
-      <a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Hyderabad">Feathervane: VOHS</a>
-      <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Goa">Feathervane: VOGA</a>
-      <a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="[Demo] Portal for city/municipal governments to receive infrastructure complaints and grievances">Fix This</a>
-    </nav>
-  </div>
+<div class="layout">
+<div class="intro">
+<h1>Yash Moitra</h1>
+<p>I&rsquo;m Yash, and this is my personal website; my poetry, musings, and other work live here until they should find more permanent homes.</p>
+<p>In a way, this is art for art&rsquo;s sake. You may make as much of it.</p>
+</div>
+<div class="divider"></div>
+<nav class="links">
+<a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Writings on my wall">Oeuvre</a>
+<a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
+<details class="group">
+<summary>Feathervane</summary>
+<div class="sublinks">
+<a href="https://vidp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Delhi">VIDP/DEL: Indira Gandhi International Airport, New Delhi</a>
+<a href="https://vobl.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Bengaluru">VOBL/BLR: Kempegowda International Airport, Bengaluru</a>
+<a href="https://vanp.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Nagpur">VANP/NAG: Dr. Babasaheb Ambedkar International Airport, Nagpur</a>
+<a href="https://vohs.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Hyderabad">VOHS/HYD: Rajiv Gandhi International Airport, Hyderabad</a>
+<a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Goa">VOGA/GOX: Manohar International Airport, Goa</a>
+</div>
+</details>
+<a href="https://fixthis.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="[Demo] Portal for city/municipal governments to receive infrastructure complaints and grievances">Fix This</a>
+</nav>
+</div>
 </body>
 </html>
