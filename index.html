@@ -94,9 +94,6 @@ white-space: normal;
 z-index: 2;
 pointer-events: none;
 }
-.links a.internal::after {
-content: ' →';
-}
 .group {
 width: 100%;
 }
@@ -111,12 +108,14 @@ display: inline-block;
 }
 .group summary::-webkit-details-marker { display: none; }
 .group summary::after {
-content: ' ▸';
+content: ' ↗';
 font-size: 0.75em;
 opacity: 0.5;
+display: inline-block;
+transition: transform 0.15s ease;
 }
 .group[open] summary::after {
-content: ' ▾';
+transform: rotate(90deg);
 }
 .group summary:hover {
 color: #888;
@@ -147,7 +146,7 @@ text-wrap: pretty;
 <div class="divider"></div>
 <nav class="links">
 <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Writings on my wall">Oeuvre</a>
-<a href="/archive/" class="internal" data-tip="Documents and letters, kept for the record">Archive</a>
+<a href="/archive/" data-tip="Documents and letters, kept for the record">Archive</a>
 <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
 <details class="group">
 <summary>Feathervane</summary>
