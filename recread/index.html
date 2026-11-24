@@ -8,43 +8,59 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 16px; }
 body {
-background: #fff;
-color: #000;
-font-family: Georgia, 'Times New Roman', serif;
-line-height: 1.8;
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 60px 24px;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.8;
 }
-.wrap {
-width: 100%;
-max-width: 720px;
-text-align: center;
+.item-page { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+.back-link {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 40px;
 }
-h1 {
-font-size: 48px;
-font-weight: normal;
-letter-spacing: 2px;
-line-height: 1.2;
+.back-link:hover { text-decoration: underline; }
+.item-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 42px;
+  font-weight: normal;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
 }
-.rule {
-width: 128px;
-height: 1px;
-background: #999;
-margin: 40px auto 0;
+.item-date { font-size: 16px; color: #666; font-style: italic; margin-bottom: 40px; }
+.item-content {
+  margin-top: 60px;
+  line-height: 2;
+  font-family: Georgia, 'Times New Roman', serif;
 }
+.item-content p { margin-bottom: 20px; }
+.item-page-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 0 40px;
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+}
+.item-page-nav a { font-size: 16px; text-decoration: none; color: #000; }
+.item-page-nav a:hover { text-decoration: underline; }
 @media (max-width: 600px) {
-body { padding: 56px 20px; }
-h1 { font-size: 36px; }
+  .item-title { font-size: 32px; }
+  .item-page-nav { margin: 60px 0 20px; }
 }
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>Recommended Reading</h1>
-<div class="rule"></div>
+<div class="item-page">
+  <a href="/" class="back-link">Back to yashmoitra.com</a>
+  <h2 class="item-title">Recommended Reading</h2>
+  <p class="item-date">Under Active Construction</p>
+  <div class="item-content"></div>
+  <nav class="item-page-nav" aria-label="Page navigation">
+    <a href="/">Back to yashmoitra.com</a>
+  </nav>
 </div>
 </body>
 </html>
