@@ -114,8 +114,11 @@ opacity: 0.5;
 display: inline-block;
 transition: transform 0.15s ease;
 }
-.group[open] summary::after {
-transform: rotate(90deg);
+.group[open] > summary::after {
+transform: rotate(135deg);
+}
+.sublinks .group summary {
+font-size: 15px;
 }
 .group summary:hover {
 color: #888;
@@ -171,7 +174,9 @@ max-width: calc(100vw - 60px);
 <div class="divider"></div>
 <nav class="links">
 <a href="https://oeuvre.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Writings on my wall">Oeuvre</a>
-<a href="/archive/" target="_blank" rel="noopener noreferrer" data-tip="For the sake of memory and all (else) that lives">Archive</a>
+<details class="group">
+<summary>Tinkerings</summary>
+<div class="sublinks">
 <a href="https://sovereignratings.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Relativistic analysis of national scoring methods">Sovereign Ratings Project</a>
 <details class="group">
 <summary>Feathervane</summary>
@@ -183,7 +188,10 @@ max-width: calc(100vw - 60px);
 <a href="https://voga.yashmoitra.com" target="_blank" rel="noopener noreferrer" data-tip="Live METARs and active NOTAMs for Goa">VOGA/GOX</a>
 </div>
 </details>
-<a href="/recread/" target="_blank" rel="noopener noreferrer" data-tip="Still figuring this out">Recommended Reading (Under Active Construction)</a>
+</div>
+</details>
+<a href="/recread/" target="_blank" rel="noopener noreferrer" data-tip="Under Active Construction">Recommended Reading</a>
+<a href="/archive/" target="_blank" rel="noopener noreferrer" data-tip="For the sake of memory and all (else) that lives">Archive</a>
 </nav>
 </div>
 </body>
